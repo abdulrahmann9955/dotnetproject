@@ -28,7 +28,7 @@ namespace Persistence
                     Title = "Past Activity 2",
                     Date = DateTime.Now.AddMonths(-1),
                     Description = "Activity 1 month ago",
-                    Category = "culture",
+                    Category = "asds",
                     City = "Paris",
                     Venue = "Louvre",
                 },
