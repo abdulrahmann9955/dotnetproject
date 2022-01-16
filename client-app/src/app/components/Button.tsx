@@ -1,7 +1,11 @@
 import React from 'react'
 import Button from '@material-tailwind/react/Button'
 
-export default function Buttons() {
+interface Props {
+    value: any
+}
+
+export default function Buttons({ value }: Props) {
     return (
         <Button
             color='green'
@@ -12,7 +16,7 @@ export default function Buttons() {
             iconOnly={false}
             ripple='light'
         >
-            Button
+            {value}
         </Button>
     )
 }

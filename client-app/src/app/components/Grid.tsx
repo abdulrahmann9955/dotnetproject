@@ -4,8 +4,8 @@ interface Props {
     style: any
 }
 
-const Grid = (props: Props) => {
-    return <div className='grid grid-cols-6'>{props.style}</div>
+const Grid = ({ style }: Props) => {
+    return <div className='grid grid-cols-1'>{style}</div>
 }
 
 export default Grid

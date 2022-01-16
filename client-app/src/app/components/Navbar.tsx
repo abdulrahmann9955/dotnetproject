@@ -8,11 +8,15 @@ import NavbarCollapse from '@material-tailwind/react/NavbarCollapse'
 import Nav from '@material-tailwind/react/Nav'
 import NavItem from '@material-tailwind/react/NavItem'
 import NavLink from '@material-tailwind/react/NavLink'
-import Buttons from './Button'
+import TailwindButton from './TailwindButton'
 
 import { FcConferenceCall } from 'react-icons/fc'
 
-export default function ResponsiveNavBar(props: any) {
+interface Props {
+    openForm: () => void
+}
+
+export default function ResponsiveNavBar({ openForm }: Props) {
     const [openNavbar, setOpenNavbar] = useState(false)
 
     return (
@@ -35,7 +39,11 @@ export default function ResponsiveNavBar(props: any) {
                             Activities
                         </NavLink>
                         <NavItem ripple='light'>
-                            <Buttons />
+                            <TailwindButton
+                                value={'Add Activity'}
+                                className='py-2.5 px-6 text-white rounded-lg bg-green-400 hover:bg-green-600 shadow-lg block md:inline-block'
+                                onClick={openForm}
+                            />
                         </NavItem>
                     </Nav>
                 </NavbarCollapse>
